@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <style>
+      img {
+        display: none;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      }
+      #board {
+        width: 100vw;
+        height: 100vh;
+        color: white;
+      }
+      .title {
+        text-align: center;
+        color: burlywood;
+        margin: 25vh 0 0px 0;
+        display: block;
+        font-size: 40px;
+        font-weight: 900;
+        font-family: '궁서체', sans-serif, 'Franklin Gothic Medium',
+          'Arial Narrow', Arial;
+      }
+      #board > div {
+        text-align: center;
+      }
+      .title2 {
+        font-size: 20px;
+        font-weight: 900;
+      }
+      span {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      #_321 {
+        display: none;
+      }
+    </style>
+    <title>Document</title>
+    <script src="./howler.min.js"></script>
+    <script src="./index.js"></script>
+    <img src="/img/moktak.png" style="display: none" alt="" />
+    <img src="/img/body1.png" alt="" />
+    <img src="/img/body2.png" alt="" />
+    <img src="/img/head1.png" alt="" />
+    <img src="/img/head2.png" alt="" />
+    <img src="/img/glow1.png" alt="" />
+    <img src="/img/glow2.png" alt="" />
+    <img src="/img/glow3.png" alt="" />
+  </head>
+  <body style="margin: 0">
+    <div id="board">
+      <span class="title">목탁!</span>
+      <div>
+        <span class="title2">비트 매니아</span>
+        <span style="color: red; font-style: italic">remastered</span>
+        <br /><br />
+        <span style="color: darkgray">박자에 맞춰 목탁을 두드리세요.</span>
+        <br />
+        <div
+          id="play"
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            border-radius: 10px;
+            border: 1px white solid;
+            font-weight: 900;
+            width: 30vw;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto;
+          "
+        >
+          play
+        </div>
+        <div
+          style="position: absolute; text-align: end; right: 5px; bottom: 5px"
+        >
+          <span><a href="https://github.com/im0505">개발자 블로그</a></span>
+          <br />
+          <span
+            ><a href="https://www.youtube.com/watch?v=df9_a4ySCcE"
+              >음원</a
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      id="_321"
+      style="
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+        align-items: center;
+        color: white;
+        font-size: 100px;
+      "
+    >
+      3
+    </div>
+  </body>
+</html>
