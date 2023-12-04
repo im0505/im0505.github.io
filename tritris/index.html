@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <style>
+      * {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .screen-wrap {
+        width: 100%;
+        max-width: 550px;
+        max-height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .screen {
+        overflow: hidden;
+        max-width: 500px;
+        max-height: 500px;
+        width: 80%;
+        transform-origin: 0 0;
+      }
+
+      .controller {
+        background-color: #e0e0e0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0 0 15px 15px;
+        position: relative;
+      }
+
+      .controller-main {
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .d-pad,
+      .buttons,
+      .start-select {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+      }
+      .layer2 {
+        display: flex;
+      }
+
+      .button {
+        width: 30px;
+        height: 30px;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .empty {
+        border: 0;
+        background-color: #ccc;
+        width: 30px;
+        height: 32px;
+      }
+
+      .up {
+        border-bottom: 0px !important;
+      }
+      .down {
+        border-top: 0px !important;
+        position: relative;
+        top: -1px;
+      }
+      .left {
+        border-right: 0px !important;
+      }
+      .right {
+        border-left: 0px !important;
+      }
+      .up:after,
+      .down:after {
+        content: '';
+        border: 1px solid #999;
+        height: 12px;
+      }
+      .left:after,
+      .right:after {
+        content: '';
+        border: 1px solid #999;
+        width: 12px;
+      }
+
+      .d-pad .up,
+      .d-pad .down {
+        margin-left: 30px;
+      }
+
+      .d-pad .button {
+        border: 1px solid #999;
+      }
+
+      .buttons .button:hover {
+        color: #999;
+        background-color: #afa3cc;
+      }
+      .buttons .button {
+        user-select: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: 30px;
+        background-color: #d4c5f9;
+        color: white;
+        font-weight: bold;
+      }
+      .button.x,
+      .button.b {
+        margin-left: 66px;
+      }
+      .button.a {
+        margin-left: 35px;
+      }
+
+      .start-select .button {
+        margin: 0 10px;
+        width: 60px;
+        background-color: #ccc;
+        color: #333;
+      }
+
+      .left:hover {
+        background: linear-gradient(to right, #999, #ccc);
+      }
+      .right:hover {
+        background: linear-gradient(to left, #999, #ccc);
+      }
+      .up:hover {
+        background: linear-gradient(to bottom, #999, #ccc);
+      }
+      .down:hover {
+        background: linear-gradient(to top, #999, #ccc);
+      }
+      .screen-wrap {
+        background-color: #e0e0e0;
+        border-radius: 15px 15px 0 0;
+      }
+      .wrapper {
+        max-width: 550px;
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        background-color: black;
+      }
+      .start-select {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+      }
+      .email {
+        bottom: 5px;
+        right: 10px;
+        position: absolute;
+        font-style: italic;
+        color: cornflowerblue;
+      }
+      .score {
+        position: absolute;
+        color: white;
+        z-index: 10;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-PMVfcXcc.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="screen-wrap">
+        <div class="screen">
+          <div class="score"></div>
+        </div>
+      </div>
+
+      <div class="controller">
+        <div class="controller-main">
+          <div class="d-pad">
+            <div class="layer1">
+              <div class="button up"></div>
+            </div>
+            <div class="layer2">
+              <div class="button left"></div>
+              <div class="empty"></div>
+              <div class="button right"></div>
+            </div>
+            <div class="layer3">
+              <div class="button down"></div>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="layer1">
+              <div class="button x">X</div>
+            </div>
+            <div class="layer2">
+              <div class="button y">Y</div>
+              <div class="button a">A</div>
+            </div>
+            <div class="layer3">
+              <div class="button b">B</div>
+            </div>
+          </div>
+        </div>
+        <div class="start-select">
+          <div class="button select">SELECT</div>
+          <div class="button start">START</div>
+        </div>
+        <div class="email">im05@kakao.com</div>
+      </div>
+    </div>
+  </body>
+</html>
